@@ -10,7 +10,7 @@ RUN apk add --update --no-cache postgresql-client jpeg libjpeg \
     && pip install --no-cache-dir -r requirements.txt \
     && apk del .tmp-build-deps
 
-RUN mkdir -p /vol/web/media /vol/web/static \
+RUN mkdir -p /vol/web/media /vol/web/static
 
 COPY . .
 
