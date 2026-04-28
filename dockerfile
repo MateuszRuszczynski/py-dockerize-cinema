@@ -11,10 +11,6 @@ RUN apk add --update --no-cache postgresql-client jpeg libjpeg \
     && apk del .tmp-build-deps
 
 RUN mkdir -p /vol/web/media /vol/web/static \
-    && adduser -D appuser \
-    && chown -R appuser:appuser /vol
-
-USER appuser
 
 COPY . .
 
