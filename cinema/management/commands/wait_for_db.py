@@ -7,7 +7,6 @@ class Command(BaseCommand):
         db_up = False
         while db_up is False:
             try:
-                # This check command tries to see if the DB is ready
                 self.check(databases=['default'])
                 db_up = True
             except OperationalError:
